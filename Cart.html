@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <style>
+        @import url("stylesheet.css");
+    </style>
+    <script src="Joud.js"></script>
+</head>
+
+<body onload="onload()">
+
+    <header>
+        <div id='Logo'>
+            <h1>Good To Go</h1>
+        </div>
+        <div class='navigation'>
+            <a href="index.html" accesskey="h">Home Page</a>
+            <a href="OwnerDashboard.html" accesskey="o">Owner Dashboard</a>
+            <a href="CustomerDashboard.html" accesskey="c">Customer Dashboard</a>
+        </div>
+    </header>
+
+    <main>
+
+        <ul class="GHBreadcrumb">
+            <li><a href="index.html">Home Page</a></li>
+            <li><a href="CustomerDashboard.html">Customer Dashboard</a></li>
+            <li><a href="Restaurants.html">Restaurant</a></li>
+            <li><a href="Cart.html">Cart</a></li>
+        </ul>
+
+        <div class="GHcart-container">
+          <form>
+            <table class="GHcart-table">
+                <thead>
+                    <tr>
+                        <th>Products</th>
+                        <th>Name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- Cart items will be populated here -->
+                </tbody>
+            </table>
+
+            <table class="GHsummary-table">
+                <tr>
+                    <th colspan="2">Order summary</th>
+                </tr>
+                <tr>
+                    <td>Products</td>
+                    <td id="products-total">0 SR</td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td>5 SR</td>
+                </tr>
+            </table>
+
+        </div>
+
+        <div class="GHactions">
+            <button class="GHcheckout-button">Check out</button>
+            <button class="GHclear-button">Clear</button>
+        </div>
+       </form>
+    </main>
+
+    <footer>
+        <div id='contactus'>
+            <h3>Contact Us:</h3>
+            <ul>
+                <li><a href="tel:+966 055 475 5584" class="phone">+966 055 475 5584</a></li>
+                <li><a href="tel:+966 055 475 5584" class="phone">+011 275 3859</a></li>
+                <li><a href="mailto:IT312G4@gmail.com" class="email">IT312G4@gmail.com</a></li>
+            </ul>
+        </div>
+
+        <div id='followus'>
+            <h3>Follow Us:</h3>
+            <ul>
+                <li>Instagram</li>
+                <li>X</li>
+            </ul>
+        </div>
+
+        <div id='copyright'>
+            <p> &copy; 2024 IT312 Project </p>
+        </div>
+    </footer>
+
+    <script>
+    
+    
+  
+    
+        // Retrieve cart items from local storage
+        let cartItems = JSON.parse(localStorage.getItem('cartItems'));
+
+        // Function to populate cart table
+        function populateCart() {
+            let cartTableBody = document.getElementById('cart-items');
+            let productsTotal = 0;
+            
+            
+            
+            
+            
+            
+            
+            
+
+            // Clear existing rows
+            cartTableBody.innerHTML = '';
+
+            // Populate cart items
+           
+         
+console.log(cartItems); 
+cartItems.forEach(item => {
+    if (item.quantity < 0) {
+        console.error('Error: Negative quantity found', item);
+        item.quantity = 1; 
+    }
+
+  
+                let row = document.createElement('tr');
+                row.innerHTML = `
+                    <td><img src="${item.image}" alt="Product"></td>
+                    <td>${item.name}</td>
+                    <td>
+                        <div class="GHnumber"> <button type="button">-</button><p>${item.quantity}</p><button type="button">+</button>
+                        </div>
+                    </td>
+                    <td>${item.price} SR</td>
+                    <td><button type="button">X</button></td>
+                `;
+                cartTableBody.appendChild(row);
+                productsTotal += item.price * item.quantity;
+            });
+            
+            
+            
+            
+            
+     
+            
+            
+            
+            
+            // Function to update the quantity
+    const updateQuantity = (element, increment) => {
+        let currentQuantity = parseInt(element.querySelector('p').innerText);
+        currentQuantity = increment ? currentQuantity + 1 : Math.max(currentQuantity - 1, 0);
+        element.querySelector('p').innerText = currentQuantity;
+       updateTotal();
+    };
+
+    // Function to delete an item
+    const deleteItem = (row) => {
+        row.remove();
+        updateTotal();
+    };
+    
+   
+   
+   // Function to update total cost
+    const updateTotal = () => {
+        let total = 0;
+        let sip = 5;
+        document.querySelectorAll('.GHcart-table tbody tr').forEach(row => {
+            const price = parseFloat(row.cells[3].innerText.replace(' SR', ''));
+            const quantity = parseInt(row.querySelector('.GHnumber p').innerText);
+            total += price * quantity; 
+           
+        });
+        document.querySelector('.GHsummary-table td:last-child').innerText = total+ ' SR';
+
+    };
+   
+   
+
+   
+   
+
+    // Function to clear the cart
+    const clearCart = () => {
+        document.querySelector('.GHcart-table tbody').innerHTML = '';
+        updateTotal();
+    };
+
+    // Adding event listeners to buttons
+    document.querySelectorAll('.GHnumber button').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const isIncrement = e.target.innerText === '+';
+            updateQuantity(e.target.parentElement, isIncrement);
+        });
+    });
+
+    document.querySelectorAll('.GHcart-table tbody tr').forEach(row => {
+        row.querySelector('td:last-child button').addEventListener('click', () => {
+            deleteItem(row);
+        });
+    });
+
+    document.querySelector('.GHclear-button').addEventListener('click', clearCart);
+
+   
+    // Checkout process
+document.querySelector('.GHcheckout-button').addEventListener('click', (e) => {
+    e.preventDefault();
+    const displayedTotalCost = document.querySelector('.GHsummary-table td:last-child').innerText;
+    // Extract the numeric value from the displayed total and convert it to a number
+    const numericTotalCost = parseFloat(displayedTotalCost.replace(' SR', ''));
+    // Add 5 to the numeric total cost for the alert message
+    const alertTotalCost = numericTotalCost + 5;
+    alert(`Thank you for your purchase! Your total cost is ${alertTotalCost} SR`);
+    location.href = 'Evaluation.html';
+});
+
+
+            
+           
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            // Update products total
+            document.getElementById('products-total').textContent = `${productsTotal} SR`;
+            // Update order total
+            let orderTotal = productsTotal + 5; // Assuming 5 SR shipping cost
+            document.getElementById('order-total').textContent = `${orderTotal} SR`;
+        }
+
+
+        // Populate cart on page load
+        populateCart();
+    </script>
+
+</body>
+
+</html>

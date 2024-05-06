@@ -1,0 +1,1835 @@
+:root {
+    --color1: #0C1213 ; /* Header / Footer */
+    --color2: #D6B360 ; /* Font color */
+    --color3: #E3BF70 ; /* Navigation / body color */
+    --color4: #111B1F ; /* vision / How to order light */
+    --color5: #0E1619 ; /* Offers / Reviews dark */
+    --color6: #807A61 ; /* Breadcrumbs */
+    --color7: #d3a029 ; /* Button hovering color */
+}
+
+.light-theme {
+    --color1: #464D63 ; /* Header / Footer */
+    --color2: #D6B360 ; /* Font color */
+    --color3: #d2991d ; /* Navigation / body color */
+    --color4: #686f86 ; /* vision / How to order light */
+    --color5: #E9F1FA ; /* Offers / Reviews dark */
+    --color6: rgb(54, 53, 47) ; /* Breadcrumbs */
+    --color7: #ffae00 ; /* Button hovering color */
+} /* #c4dce0 light blue suitable for --color4 */
+
+@media only screen and (min-width: 1181px) {
+
+header {
+	display: flex;
+	background-color: var(--color1) ;
+	color: var(--color3) ;
+	padding: 0% ;
+	margin: 0% ;
+	height: 5.5em ;
+	width: 100% ;
+	justify-content: space-between ;
+	align-items: center ;
+}
+
+header #Logo {
+	margin-left: 1em;
+	color: var(--color3) ;
+    white-space: nowrap ;
+}
+
+.navigation {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+	font-weight: lighter ;
+    margin-right: 7em;
+    color: var(--color3) ;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.2em;
+    color: var(--color3);
+    text-decoration: none;
+	top: 1.2em ;
+	margin-left: 1em ;
+	margin-right: 1em ;
+}
+
+.navigation a::before {
+	content: '' ;
+	position: absolute ;
+	top: 100% ;
+	left: 0 ;
+	width: 0 ;
+	height: 0.1em ;
+	background: white ;
+	transition: .3s ;
+}
+
+.navigation a:hover::before {
+	width: 100% ;
+	color: var(--color3) ;
+}
+
+#theme {
+    background-color: transparent;
+    border-style: none;
+    display: inline;
+}
+
+#theme img {
+    width: 3em ;
+    height: auto;
+    margin-right: 3em ;
+}
+
+body {
+	font-family: poppins ;
+	color:var(--color3) ;
+	height: 100% ;
+	width: 100% ;
+	background-color: var(--color4) ;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+	height: 100% ;
+	width: 100% ;
+}
+
+main h1 {
+	text-align: center ;
+	padding: 0 ;
+	margin: 0 ;
+	padding-top: 0.5em ;
+	font-size: 3em ;
+}
+
+.JMbreadcrumb {
+  list-style: none;
+  padding: 0.5em 2em;
+}
+
+ul.JMbreadcrumb li {
+  display: inline;
+  font-size: 1.2em;
+}
+
+ul.JMbreadcrumb li+li:before {
+  padding: 1em;
+  color: #807A61 ;
+  content: "/\00a0";
+}
+
+ul.JMbreadcrumb li a {
+  color: #807A61;
+  text-decoration: none;
+}
+
+ul.JMbreadcrumb li a:hover {
+  text-decoration: underline;
+}
+
+.JMpic {
+    position: relative;
+    width: 100%;
+    height: 38.125rem;
+    padding: 0;
+    margin: 0 ;
+    border-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+.JMpic::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	background-image: url("images/food.jpeg");
+    opacity: 0.3;
+}
+
+.JMpic h1 {
+    z-index: 1;
+    color: var(--color3);
+}
+
+.vl {
+  border-left: 0.125em solid var(--color3);
+  height: 14.375em;
+  position: absolute;
+  left: 50%;
+  margin-left: -0.188em;
+  top: 45.625em;
+}
+
+#vision {
+    background-color: var(--color4) ;
+	color: var(--color3) ;
+    width: 100%;
+    height: 18.75em;
+    padding: 0%;
+    margin: 0%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#vision h1 {
+    text-align: left;
+    margin: 5em;
+	font-size: 3.125em ;
+    color: var(--color3);
+}
+
+#vision p {
+    text-align: center;
+    margin: 5em;
+	font-size: 1.375em ;
+	padding-right: 2.125em ;
+}
+
+.JMoffers-container {
+	background-color: var(--color5) ;
+    display: flex ;
+    flex-wrap: nowrap ;
+    padding-bottom: 1.25em ;
+	justify-content: center ;
+	justify-content: space-between ;
+	align-content: center ;
+	overflow-x: scroll;
+	height: 21.875em;
+	width: 100%;
+	overflow-y : hidden ;
+}
+
+.JMoffer {
+    flex: 0 0 calc(30% - 3em);
+	min-height: 18.75em;
+    margin: 0.625em;
+    padding: 0.625em;
+	padding-bottom: 0.938em ;
+    border: 0.063em solid var(--color3);
+	justify-content: center ;
+	justify-content: space-between ;
+	align-content: center ;
+	background-color: var(--color4) ;
+}
+
+.JMoffer h2 {
+	font-size: 1.563em ;
+}
+
+.JMoffer p {
+	font-size: 1.125em ;
+}
+
+.JMofferimg {
+	height: 11.25em ;
+	width: auto ;
+    display: block;
+    margin: 0 auto;
+}
+
+.JMhtOrder-container {
+	background-color: var(--color4) ;
+	color: var(--color3) ;
+    display: flex;
+    flex-wrap: wrap;
+	width: 100% ;
+	height: 18.75em ;
+	padding: 0% ;
+	margin: 0% ;
+	justify-content: center ;
+	align-content: center ;
+	justify-content: space-evenly ;
+}
+
+.JMhtOrder {
+    flex: 0 0 calc(33.33% - 1.25em);
+	text-align: center ;
+	border-style: none ;
+}
+
+.JMhtOrder h3 {
+	font-size: 1.375em ;
+	font-weight: lighter ;
+}
+
+
+.JMorder {
+    width: 12.5em;
+    height: 12.5em;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.JMreviews-container {
+	background-color: var(--color5) ;
+    display: flex;
+    flex-wrap: wrap;
+	width: 100% ;
+	height: 25em ;
+	padding: 0% ;
+	margin: 0% ;
+	align-content: center ;
+	justify-content: space-evenly ;
+	align-items: center ;
+}
+
+.JMreview {
+	display: flex ;
+    text-align: center;
+    border: 0.063em solid var(--color3);
+	width: 15.625em ;
+	min-height: 18.75em ;
+    margin: 0.625em ;
+    padding: 0.625em ;
+    box-sizing: border-box ;
+	background-color: var(--color4) ;
+	flex-direction: column ;
+	align-content: flex-end ;
+	text-align: left ;
+}
+
+.JMreview h3 {
+	font-size: 1.563em ;
+	margin-bottom: 0.063em ;
+}
+.JMreview p {
+	font-size: 1.125em ;
+	margin-bottom: 0.063em ;
+}
+
+.JMreview img {
+	width: 11.25em ;
+	height: 11.25em ;
+	align-content: center ;
+    display: block;
+    margin: 0 auto;
+}
+
+.JMreview hr {
+    border: none;
+    border-top: 0.063em solid gray ;
+    margin: 0.625em 0;
+}
+
+.rate {
+    font-size: 1.125em;
+    color: var(--color3);
+	margin-bottom: 0.313em ;
+}
+
+.star {
+    font-size: 2.188em;
+    color: gold;
+	margin-bottom: 0.313em ;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  text-align: center;
+  background-color: var(--color1)  ;
+  color: var(--color3) ;
+  font-size: 1.125em ;
+  height: 18.75em ;
+  width: 100% ;
+}
+
+#contactus,
+#followus, {
+  flex: 1 1 33%;
+  margin-bottom: 1.25em;
+}
+
+ul {
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+footer a:hover {
+    padding-left: 0;
+    list-style-position: inside;
+    color: var(--color7);
+  }
+
+#copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 6.25em;
+}
+
+.phone , .email {
+	color: var(--color3) ;
+	text-decoration: none ;
+}
+}
+
+/*// Responsive web design PHASE 3 //*/
+
+@media only screen and (min-width: 768px) and (max-width: 1180px) { /* works for iPad air, iPad mini, and iPad pro */
+
+    header {
+        display: block;
+        background-color: var(--color1) ;
+        color: var(--color3) ;
+        padding: 0% ;
+        margin: 0% ;
+        height: 8.5em ;
+        width: 100% ;
+        justify-content: center ;
+        align-items: center ;
+    }
+    
+    header #Logo {
+        display: flex;
+        color: var(--color3) ;
+        white-space: nowrap ;
+        justify-content: center;
+        align-content: center;
+        font-size: medium;
+        margin-right: 4em;
+        margin-top: -2%;
+        margin-bottom: 2%;
+    }
+    
+    .navigation {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        font-weight: lighter ;
+        white-space: nowrap;
+        font-size: 1em ;
+        margin-top: -1.5%;
+    }
+    
+    .navigation a {
+        position: relative;
+        font-size: 1.2em;
+        color: var(--color3);
+        text-decoration: none;
+        top: 1.2em ;
+        margin-left: 1em ;
+        margin-right: 1em ;
+    }
+    
+    .navigation a::before {
+        content: '' ;
+        position: absolute ;
+        top: 100% ;
+        left: 0 ;
+        width: 0 ;
+        height: 0.1em ;
+        background: var(--color3) ;
+        transition: .3s ;
+    }
+    
+    .navigation a:hover::before {
+        width: 100% ;
+        color: var(--color3) ;
+    }
+
+    #theme {
+        background-color: transparent;
+        border-style: none;
+        display: inline;
+        margin-top: -4%;
+        margin-left: 2%;
+    }
+    
+    #theme img {
+        width: 3em ;
+        height: auto;
+    }
+    
+    body {
+        font-family: poppins ;
+        color:var(--color3) ;
+        height: 100% ;
+        width: 100% ;
+        background-color: var(--color1) ;
+        margin: 0;
+        padding: 0;
+    }
+    
+    html {
+        height: 100% ;
+        width: 100% ;
+    }
+    
+    main h1 {
+        text-align: center ;
+        padding: 0 ;
+        margin: 0 ;
+        padding-top: 0.5em ;
+        font-size: 3em ;
+    }
+    
+    .JMpic {
+        position: relative;
+        width: 100%;
+        height: 38.125rem;
+        padding: 0;
+        margin: 0 auto;
+        border-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+    }
+    
+    .JMpic::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("images/food.jpeg");
+        background-color: var(--color3);
+        opacity: 0.3;
+    }
+    
+    .JMpic h1 {
+        display: flex;
+        z-index: 1;
+        color: var(--color3);
+        margin-bottom: 7%;
+    }
+    
+    .vl {
+      border-left: 0.125em solid var(--color3);
+      height: 14.375em;
+      position: absolute;
+      left: 50%;
+      margin-left: -0.188em;
+      top: 46.625em;
+    }
+    
+    #vision {
+        background-color: var(--color4) ;
+        color: var(--color3) ;
+        width: 100%;
+        height: 18.75em;
+        padding: 0%;
+        margin: 0%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #vision h1 {
+        text-align: left;
+        margin: 2em;
+        font-size: 3.125em ;
+    }
+    
+    #vision p {
+        text-align: center;
+        margin: 4em;
+        margin-right: 1em;
+        font-size: 1.3em ;
+    }
+    
+    .JMoffers-container {
+        background-color: var(--color5) ;
+        display: flex ;
+        flex-wrap: nowrap ;
+        padding-bottom: 1.25em ;
+        justify-content: center ;
+        justify-content: space-between ;
+        align-content: center ;
+        overflow-x: scroll;
+        height: 21.875em;
+        width: 100%;
+        overflow-y : hidden ;
+    }
+    
+    .JMoffer {
+        flex: 0 0 calc(30% - 3em);
+        min-height: 18.75em;
+        margin: 0.625em;
+        padding: 0.625em;
+        padding-bottom: 0.938em ;
+        border: 0.063em solid black;
+        justify-content: center ;
+        justify-content: space-between ;
+        align-content: center ;
+        background-color: var(--color4) ;
+    }
+    
+    .JMoffer h2 {
+        font-size: 1.563em ;
+    }
+    
+    .JMoffer p {
+        font-size: 1.125em ;
+    }
+    
+    .JMofferimg {
+        height: 11.25em ;
+        width: auto ;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .JMhtOrder-container {
+        background-color: var(--color4) ;
+        color: var(--color3) ;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100% ;
+        height: 18.75em ;
+        padding: 0% ;
+        margin: 0% ;
+        justify-content: center ;
+        align-content: center ;
+        justify-content: space-evenly ;
+    }
+    
+    .JMhtOrder {
+        flex: 0 0 calc(33.33% - 1.25em);
+        text-align: center ;
+        border-style: none ;
+    }
+    
+    .JMhtOrder h3 {
+        font-size: 1.375em ;
+        font-weight: lighter ;
+    }
+    
+    
+    .JMorder {
+        width: 12.5em;
+        height: 12.5em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .JMreviews-container {
+        background-color: var(--color5) ;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100% ;
+        height: 25em ;
+        padding: 0% ;
+        margin: 0% ;
+        align-content: center ;
+        justify-content: space-evenly ;
+        align-items: center ;
+    }
+    
+    .JMreview {
+        display: flex ;
+        text-align: center;
+        border: 0.063em solid black;
+        width: 15.625em ;
+        min-height: 18.75em ;
+        margin: 0.625em ;
+        padding: 0.625em ;
+        box-sizing: border-box ;
+        background-color: var(--color4) ;
+        flex-direction: column ;
+        align-content: flex-end ;
+        text-align: left ;
+    }
+    
+    .JMreview h3 {
+        font-size: 1.563em ;
+        margin-bottom: 0.063em ;
+    }
+    .JMreview p {
+        font-size: 1.125em ;
+        margin-bottom: 0.063em ;
+    }
+    
+    .JMreview img {
+        width: 11.25em ;
+        height: 11.25em ;
+        align-content: center ;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .JMreview hr {
+        border: none;
+        border-top: 0.063em solid gray ;
+        margin: 0.625em 0;
+    }
+    
+    .rate {
+        font-size: 1.125em;
+        color: var(--color3);
+        margin-bottom: 0.313em ;
+    }
+    
+    .star {
+        font-size: 2.188em;
+        color: gold;
+        margin-bottom: 0.313em ;
+    }
+    
+    footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      text-align: center;
+      background-color: var(--color1)  ;
+      color: var(--color3) ;
+      font-size: 1.125em ;
+      height: 18.75em ;
+      width: 100% ;
+    }
+    
+    #contactus,
+    #followus {
+      flex: 1 1 33%;
+      margin-bottom: 1.25em;
+    }
+    
+    ul {
+      padding-left: 0;
+      list-style-position: inside;
+    }
+    
+    footer a:hover {
+        padding-left: 0;
+        list-style-position: inside;
+        color: var(--color7) ;
+      }
+    
+    #copyright {
+      width: 100%;
+      text-align: center;
+      margin-top: 6.25em;
+    }
+    
+    .phone , .email {
+        color: var(--color3) ;
+        text-decoration: none ;
+    }
+    }
+    
+@media only screen and (min-width: 430px) and (max-width: 700px) { /* iPhone 14 pro max */
+    header {
+        display: block;
+        background-color: var(--color1);
+        color: var(--color2);
+        padding: 0;
+        margin: 0;
+        height: 5.5em;
+        width: 100%;
+        align-items: center;
+    }
+    
+    header #Logo {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        color: var(--color3);
+        white-space: nowrap;
+        font-size: 0.8em;
+        margin-top: -3%;
+        margin-right: 2em;
+    }
+    
+    .navigation {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        font-weight: lighter;
+        white-space: nowrap;
+        font-size: 0.8em;
+    }
+    
+    .navigation a {
+        position: relative;
+        font-size: 1.2em;
+        color: var(--color3);
+        text-decoration: none;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    
+    .navigation a::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 0;
+        height: 0.1em;
+        background: white;
+        transition: 0.3s;
+    }
+    
+    .navigation a:hover::before {
+        width: 100%;
+        color: var(--color3);
+    }
+
+    #theme {
+        background-color: transparent;
+        border-style: none;
+        display: flex;
+        margin-top: -4.5em;
+        margin-left: 2%;
+        align-items: center;
+    }
+    
+    #theme img {
+        width: 2em ;
+        height: auto;
+    }
+    
+    body {
+        font-family: poppins;
+        color: var(--color3);
+        height: 100%;
+        width: 100%;
+        background-color: var(--color4);
+        margin: 0;
+        padding: 0;
+    }
+    
+    html {
+        height: 100%;
+        width: 100%;
+    }
+    
+    main h1 {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        padding-top: 0.5em;
+        font-size: 2.5em;
+    }
+    
+    .JMpic {
+        position: relative;
+        width: 100%;
+        height: 28.125em;
+        padding: 0;
+        margin: 0 auto;
+        border-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+    }
+    
+    .JMpic::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("images/food.jpeg");
+        background-color: var(--color2);
+        opacity: 0.3;
+    }
+    
+    .JMpic h1 {
+        display: flex;
+        z-index: 1;
+        color: var(--color3);
+        margin-bottom: 2%;
+    }
+    
+    #vision {
+        background-color: var(--color4);
+        color: var(--color3);
+        width: 100%;
+        height: auto;
+        padding: 0%;
+        margin: 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        line-height: 1.5em;
+    }
+    
+    #vision h1 {
+        text-align: center;
+        font-size: 2.5em;
+        margin-top: 5%;
+    }
+    
+    #vision p {
+        text-align: center;
+        font-size: 1.2em;
+        margin-top: 8%;
+        line-height: 1.3em;
+    }
+    
+    .JMoffers-container {
+        background-color: var(--color5);
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1.25em;
+        justify-content: center;
+        justify-content: space-between;
+        align-content: center;
+        overflow-x: scroll;
+        height: 21.875em;
+        width: 100%;
+        overflow-y: hidden;
+    }
+    
+    .JMoffer {
+        flex: 0 0 calc(30% - 1em);
+        min-height: 15em;
+        margin: 0.625em;
+        padding: 0.625em;
+        padding-bottom: 0.938em;
+        border: 0.063em solid black;
+        background-color: var(--color4);
+    }
+    
+    .JMoffer h2 {
+        font-size: 1.25em;
+    }
+    
+    .JMoffer p {
+        font-size: 1em;
+    }
+    
+    .JMofferimg {
+        height: 9em;
+        width: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .JMhtOrder-container {
+        background-color: var(--color4);
+        color: var(--color3);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+        padding: 0%;
+        margin: 0%;
+        justify-content: center;
+        align-content: center;
+        justify-content: space-evenly;
+    }
+    
+    .JMhtOrder {
+        flex: 0 0 calc(33.33% - 1.25em);
+        text-align: center;
+        border-style: none;
+        margin: 0.625em;
+    }
+    
+    .JMhtOrder h3 {
+        font-size: 1.25em;
+        font-weight: lighter;
+    }
+    
+    .JMorder {
+        width: 10em;
+        height: 10em;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .JMreviews-container {
+        background-color: var(--color5);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+        padding: 0%;
+        margin: 0%;
+        align-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .JMreview {
+        display: flex;
+        text-align: center;
+        border: 0.063em solid black;
+        width: 90%;
+        min-height: 12.5em;
+        margin: 0.625em;
+        padding: 0.625em;
+        box-sizing: border-box;
+        background-color: var(--color4);
+        flex-direction: column;
+        align-content: flex-end;
+        text-align: left;
+    }
+    
+    .JMreview h3 {
+        font-size: 1.25em;
+        margin-bottom: 0.063em;
+    }
+    
+    .JMreview p {
+        font-size: 1em;
+        margin-bottom: 0.063em;
+    }
+    
+    .JMreview img {
+        width: 9em;
+        height: 9em;
+        align-content: center;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .JMreview hr {
+        border: none;
+        border-top: 0.063em solid gray;
+        margin: 0.625em 0;
+    }
+    
+    .rate {
+        font-size: 1em;
+        color: var(--color3);
+        margin-bottom: 0.313em;
+    }
+    
+    .star {
+        font-size: 1.5em;
+        color: gold;
+        margin-bottom: 0.313em;
+    }
+    
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        background-color: var(--color1);
+        color: var(--color2);
+        font-size: 1em;
+        height: auto;
+        width: 100%;
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+    }
+    
+    #contactus,
+    #followus {
+        flex: 1 1 33%;
+        margin-bottom: 1.25em;
+    }
+    
+    ul {
+        padding-left: 0;
+        list-style-position: inside;
+    }
+    
+    footer a:hover {
+        padding-left: 0;
+        list-style-position: inside;
+        color: var(--color7);
+    }
+    
+    #copyright {
+        width: 100%;
+        text-align: center;
+        margin-top: 1em;
+    }
+    
+    .phone,
+    .email {
+        color: var(--color2);
+        text-decoration: none;
+    }
+}
+
+
+/*////////////////////// START OF CUSTOMER DASHBOARD PAGE  //////////////////////*/
+
+.JMrestaurant {
+    width: 25%;
+    height: auto;
+    border: 0.063em solid;
+    padding: 0.625em;
+    margin-bottom: 3.125em;
+    margin-top: 0.625em;
+    margin-right: 0.625em;
+    margin-left: 0.625em;
+    box-sizing: border-box;
+    text-align: left;
+    background-color: var(--color4);
+	z-index: 1;
+	position: relative;
+}
+
+.JMrestaurant1 {
+    width: 25%;
+    height: auto;
+    border: 0.063em solid;
+    padding: 0.625em;
+    box-sizing: border-box;
+    text-align: left;
+    background-color: var(--color4);
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.JMrestaurant-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+	align-content: space-around ;
+	position: relative;
+}
+
+.JMrestaurant p {
+	font-size: 1.125em ;
+}
+
+.resimg {
+	height: 12.5em ;
+	width: auto ;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.rating-number {
+    font-size: 0.9em;
+    color: var(--color3);
+}
+
+.JMrating {
+    font-size: 1.4em;
+    color: gold;
+}
+
+.select {
+	margin-left: 5.625em ;
+	margin-top: 1.25em ;
+	margin-bottom: 0.625em ;
+	width: 12.5em;
+	height: 2.5em;
+	font-size: 0.938em ;
+	text-align: center ;
+	font-weight: bold ;
+	background-color: var(--color4) ;
+	color: var(--color3) ;
+}
+
+.load-more {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    font-size: medium;
+    font-weight: bold;
+    width: 9em;
+    height: 3em;
+    text-transform: uppercase;
+    background-color: var(--color3);
+    color: var(--color4); 
+    margin: 2% auto ;
+    border-radius: 3em;
+    transition: all .3s ease-out ;
+}
+
+.load-more:hover {
+    background-color: var(--color7);
+}
+
+/*////////////////////// START OF CART PAGE  //////////////////////*/
+
+.GHcart-container {
+	margin-bottom:0.125em;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.GHcart-table {
+	background-color:var(--color4);
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 3.75em;
+	margin-top: 2.5em;
+	color: var(--color3);
+    border-bottom: solid;
+   border-color: #0C1213;
+}
+
+.GHcart-table th, .GHcart-table td {
+    text-align: left;
+    padding: 0.5em;
+    border-top: solid;
+    border-bottom: solid;
+    border-color: #0C1213;
+    border-bottom: 0.063em solid black;
+    text-align: left;
+}
+
+.GHcart-table th {
+	background-color: var(--color1);
+    font-size: 1.4em;
+    padding: 1.3% 1.5%;
+}
+
+.GHcart-table td {
+    font-size: 1.3em;
+}
+
+.GHcart-table img {
+    width: 6em; 
+    height: auto;
+}
+
+.GHcart-table button {
+background-color:var(--color3);
+} 
+
+.GHsummary-table {
+	width: 70%; /* 50 */
+	background-color:var(--color4);
+	border-collapse: collapse;
+	margin: 5% 15%; /* margin:2.5em auto 3.75em auto; */
+	color:var(--color3);
+    border-bottom: solid;
+    border-top: solid;
+    border-color: var(--color1);
+}
+
+.GHsummary-table th {
+	background-color: var(--color1);
+	color:#e3bf70;
+	border-top: solid;
+    border-bottom: solid;
+    border-color: var(--color1);
+	justify-content: left;
+	text-align: left;
+    font-size: 1.4em;
+    padding: 1.3% 1.5%;
+}
+
+.GHsummary-table td{ 
+	text-align: left;
+    padding: 10px; /* removed */
+    text-align: left;
+    font-size: 1.3em;
+}
+
+.GHtotal-row td {
+    font-weight: bold;
+    border-top:solid;
+    border-color: var(--color1);
+}
+
+
+.GHcheckout-button { 
+    border: none;
+    cursor: pointer;
+    font-family: italic;
+    border-radius: 3em;
+    background-color:var(--color3);
+}
+
+.GHcheckout-button:hover {
+    background-color:var(--color7);
+    transition: 0.3s;
+}
+
+.GHclear-button {
+	font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 3em;
+    font-family: italic;
+}
+
+.GHclear-button:hover {
+    background-color:var(--color7);
+    transition: 0.3s;
+}
+
+.GHactions {
+    text-align: center;
+	margin-bottom: 3.125em;  
+}
+
+.GHactions button {
+	background-color:var(--color3);
+    display: inline;
+    text-decoration: none;
+    border: 0 solid #000;
+    font-size: 150%;
+    color: black;
+    font-weight: normal;
+    padding: 0.625em 1.25em;
+    margin: 0.313em;
+}
+
+.GHactions a {
+	text-decoration: none;
+	color:black;
+}
+
+.GHnumber {
+	display: flex; 
+	align-items: center; 
+}
+
+/*////////////////////// START OF EVALUATION PAGE  //////////////////////*/
+
+.GHtitle-pre {
+    display: flex ;
+    flex-wrap: wrap ;
+    overflow-x: auto ;
+    padding-bottom: 1em ;
+	justify-content: center ;
+	justify-content: space-around ;
+    font-size: larger;
+}
+
+.GHrate-photo {
+    display: flex ;
+    flex-wrap: wrap ;
+    overflow-x: auto ;
+    padding-bottom: 1em ;
+	justify-content: center ;
+	justify-content: space-around ;
+    font-size: larger;
+}
+
+.GHcommet {
+    text-align: center; 
+    font-size: larger;
+}	
+
+#GHcomment-section textarea {
+	background-color:var(--color5);
+    font-size: medium;
+}
+
+#GHtitle {
+    font-size:1.5em;
+    padding-right:3em;
+}
+
+#GHpre{
+	padding-right: 6em;
+}
+
+
+#restaurantSelect label {
+    color: var(--color3);
+    font-size: 5em;
+}
+
+#restaurantSelect {
+    background-color: var(--color4);
+    color: var(--color3);
+    width: 8em;
+    height: 2em;
+    font-size: medium;
+}
+
+.GHcontainer {
+  text-align: center;
+}
+
+#GHcomment-section textarea	{
+	text-align: left;
+	color:white;
+	width: 50%;     
+}
+
+#GHsubmit-buttons {
+    margin-bottom: 3em ; 
+}
+
+#GHsubmit-buttons button {
+	background-color: var(--color3);
+	border: none;
+    font-size: medium;
+    color: var(--color4);
+    border-radius: 3em;
+    width: 7em;
+    height: 2em;
+    margin-top: 1em;
+}
+
+#GHsubmit-buttons button:hover {
+    background-color: var(--color7);
+    transition: 0.3s;
+}
+
+.GHBreadcrumb {
+    list-style: none;
+    padding: 0.5em 2em;
+  }
+  
+  ul.GHBreadcrumb li {
+    display: inline;
+    font-size: 1.2em;
+  }
+  
+  ul.GHBreadcrumb li+li:before {
+    padding: 1em;
+    color: var(--color6) ;
+    content: "/\00a0";
+  }
+  
+  ul.GHBreadcrumb li a {
+    color: var(--color6);
+    text-decoration: none;
+  }
+  
+  ul.GHBreadcrumb li a:hover {
+    text-decoration: underline;
+  }
+
+/*////////////////////// START OF ADD A CUISINE PAGE  //////////////////////*/
+
+
+.JBh2 {
+	color: var(--color3);
+	font-size: 220%;
+	font-weight: lighter;
+	text-align: center;
+	margin: center;
+}
+
+.JBaddOffer-container,.JBcuisine-container {
+	color: var(--color3);
+	font-size: 180%;
+}
+
+.JBcuisine-container1 ,.JBcuisine-container2, .JBaddOffer-container1{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-bottom: 8%;
+	margin-top: 2em;
+}
+
+#JBoffer1, #JBoffer3 {
+	background-color: var(--color5);
+}
+
+hr {
+	color: #807a61;
+}
+
+.JBaddOffer-container input,.JBcuisine-container input {
+	width: 120%;
+	height: 50%;
+	border: none;
+	border-bottom: .1em solid #0e181b;
+	background: linear-gradient(to top,#8c7b69 , var(--color5)); 
+	margin: 0;
+	padding: 0;
+	font-size: .6em;
+	color: var(--color5);
+}
+
+#JBaddPhoto {
+	font-size: 90%;
+	margin-left: 15%;
+	margin-bottom:10%;
+	margin-top: 2em;
+}
+
+#JBaddPhoto input {
+	border-bottom: .1em solid var(--color5);
+	background: linear-gradient(to top, #8c7b69 , var(--color5)); 
+	width: 25%;
+	height: 2.5em;
+	margin: 0;
+	padding: 0;
+}
+
+.JBoffers-list li {
+	list-style-type: none;
+	margin-bottom: 1%;
+
+}
+
+.JBoffers-list label {
+	display: block;
+	position: relative;
+	bottom: 10em;
+	background-color: #364140;
+	color: #ada390;
+	border: .1em solid grey;
+	border-radius: .6em;
+	text-align: center;
+	margin-left:30%;
+	margin-right:20%;
+	height: 8em;/*140px*/
+	width: 55%;/*700px*/
+}
+
+.JBoffers-list li button {
+	cursor: pointer;
+	border-radius: .2em;
+	height: 2.5em;
+	width: 6em;
+	position: relative;
+	left:88%;
+	bottom: 20em;
+	background-color: #807a61;
+	color: #0e181b;
+	font-size: small;
+	font-weight: bold;
+}
+
+.JBaddOffer-container button, .JBcuisine-container button{
+	cursor: pointer;
+	border-radius: .2em;
+	height: 3em;/*40px*/
+	width: 10%;/*100px*/
+	position: relative;
+	left:72%;
+	bottom: 13em;
+	background-color: #807a61;
+	color: var(--color5);
+	font-size: small;
+	font-weight: bold;
+	
+}
+
+li .JBofferImg {
+	height: 18%;
+	width: 18%;
+	position: relative;
+	top: 2em;
+	left: 17%;
+	z-index: 0; 
+}
+
+.JBcheckbox-list {
+    list-style: none; 
+    padding: 0; 
+}
+
+.JBcheckbox-list li {
+    margin-bottom: 1%; 
+}
+
+.JBcheckbox-list input[type="checkbox"] {
+    display: none;
+}
+
+.JBcheckbox-list label {
+    display: inline-block;
+    position: relative;
+    padding-left: 1%;  
+    cursor: pointer;
+}
+
+.JBcheckbox-list label::before {
+    content: "";
+    display: inline-block;
+    width: 7%; /* Adjust width of custom checkbox */
+    height: 38%; /* Adjust height of custom checkbox */
+    background-color: #807a61; /* Background color of custom checkbox */
+    border: .1em solid #ccc; /* Border of custom checkbox */
+    position: absolute;
+    bottom: 10px;
+    left:-19em;
+    transform: translateY(-50%);
+}
+
+.JBcheckbox-list input[type="checkbox"]:checked + label::before {
+    background-color: #807a61; /* Change background color of checked custom checkbox */
+}
+
+.JBcheckbox-list input[type="checkbox"]:checked + label::after{
+    content: "\2713"; /* Unicode for check mark */
+    display: block;
+    color: #fff; /* Color of check mark */
+    font-size: 3em; /* Size of check mark */
+    position: relative;
+    bottom: 1em;
+    right: 6.4em;
+    line-height: .5em; /* Align check mark vertically */
+    text-align:left; 
+    visibility: hidden;
+}
+
+.JBcheckbox-list input[type="checkbox"]:checked + label::after {
+    visibility: visible;  
+}
+
+.JBcheckbox-list label:hover::before{
+    background-color: #ccc; /* Change background color on hover */
+}
+
+.JBcheckbox-list:after {
+    visibility: hidden; /* Hide check mark on hover when checkbox is checked */
+}
+
+ul.breadcrumb {
+  padding: 0.6em 1em;
+  list-style: none;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+    display: inline;
+    font-size: 1.2em;
+  }
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+    padding: 1em;
+    color: var(--color6) ;
+    content: "/\00a0";
+  }
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #807a61;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+    color: var(--color6);
+  text-decoration: none;
+}
+
+/*////////////////////// START OF OWNER DASHBOARD + RESTAURANT PAGES  //////////////////////*/
+
+.Dbreadcrumb {
+    list-style: none;
+    padding: 0.5em 2em;
+  }
+  
+  ul.Dbreadcrumb li {
+    display: inline;
+    font-size: 1.2em;
+  }
+  
+  ul.Dbreadcrumb li+li:before {
+    padding: 1em;
+    color: var(--color6) ;
+    content: "/\00a0";
+  }
+  
+  ul.Dbreadcrumb li a {
+    color: var(--color6);
+    text-decoration: none;
+  }
+  
+  ul.Dbreadcrumb li a:hover {
+    text-decoration: underline;
+  }
+
+.headerChoices {
+    margin-right: 30px;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 1.5px solid #000;
+    border-radius: 40%;
+    background-color: #f0f0f0;
+}
+
+
+
+#choises {
+	margin-left: 90px ;
+	margin-top: 20px ;
+	margin-bottom: 10px ;
+	width: 200px;
+	height: 40px;
+	font-size: 15px ;
+	text-align: center ;
+	font-weight: bold ;
+	background-color: var(--color4) ;
+	color: var(--color3) ;
+}
+
+#choises2 {
+    text-align: center;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    background-color: var(--color4);
+}
+
+.selection {
+    text-align: center;
+    text-decoration: none;
+	background-color: var(--color4) ;
+	color: var(--color3) ;
+	width: 100% ;
+	height: 100% ;
+	font-size: 18px ;
+	font-weight: bold ;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: var(--color3);
+    margin-left: 11%;
+    margin-right: 11%;
+    margin-bottom: 4%;
+    position: relative;
+}
+
+.OnewrDashboardLinks {
+    margin-right: 30px;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4em;
+    background-color: var(--color3);
+    font-size: 150%;
+    color: black;
+    transition: .3s;
+}
+
+.OnewrDashboardLinks:hover {
+    background-color: var(--color7) ;
+}
+
+.parentsDiv {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 5%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    height: 350px;
+    flex-wrap: nowrap;
+}
+
+.parentsDiv2 {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 5%;
+    width: 100%;
+    height: 350px;
+    flex-wrap: nowrap;
+}
+
+.childDiv {
+    width: 250px;
+    background-color: var(--color5);
+    border: 1px solid #ccc;
+    min-height: 300px;
+    margin-right: 20px;
+    border-color: var(--color3);
+    box-sizing: border-box;
+	position: relative ;
+}
+
+.childDiv span {
+	font-size: 17px ;
+    margin-left: 10px;
+}
+
+.image {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 250px;
+    height: 140px;
+    justify-content: center;
+}
+
+.description {
+    margin-bottom: 10px;
+}
+
+.lable {
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container input {
+    justify-content: left;
+    margin-right: 150px;
+    width: 30px;
+    height: 20px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.quantity button {
+    padding: 1px 5px;
+    font-size: 12px;
+    background-color: var(--color3);
+}
+
+.checkbox {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 9%;
+}
+
+#cart-button {
+    margin: 5% auto 30px;
+    background-color: var(--color3);
+    padding: 15px 30px;
+    color: black;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 120%;
+    display: block;
+    width: fit-content;
+	border: none;
+    border-radius: 4em;
+}
+
+#cart-button:hover {
+    background-color: var(--color7) ;
+    transition: 0.3s;
+}
+
+#ownerDashboard {
+		display:flex;
+        width: 100%;
+        background-color: #0e1619;
+        min-height: 5em;
+        margin-right:1.25em;
+        border-color: #e3bf70;
+        box-sizing: border-box;
+        position: relative;
+        margin-bottom: 1.25em; 
+       
+    }

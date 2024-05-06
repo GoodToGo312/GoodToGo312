@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Customer Dashboard</title>
+		<style>
+			@import url("stylesheet.css") ;
+			body {
+			background-color: var(--color5) ;
+			}
+		</style>
+		<script src="Joud.js"></script>
+	</head>
+	
+	<body onload="onload()">
+		<header>
+			<div id='Logo'>
+				<h1>Good To Go</h1>
+			</div>
+			<div class='navigation'>
+				<a href="index.html" accesskey="H">Home Page</a>
+				<a href="OwnerDashboard.html" accesskey="O">Owner Dashboard</a>
+				<a href="CustomerDashboard.html" accesskey="C">Customer Dashboard</a>
+			</div>
+		</header>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+		<script>
+    		const start = moment().startOf('week').format('YYYY-MM-DD');
+    		document.write('<h3 style="text-align: center; ">' + start + '</h3><br>');
+		</script>
+
+		<main>
+			<ul class="JMbreadcrumb">
+				<li><a href= "index.html" >Home Page</a></li>
+				<li><a href= "CustomerDashboard.html" >Customer Dashboard</a></li>
+			</ul>
+
+			<!-- <form action="" method="">
+				<select name= "filter" class="select">
+					<option>Cuisine</option>
+					<option>Rate</option>
+				</select>
+			</form> -->
+			
+			<div class="JMrestaurant-container">
+			<div class="JMrestaurant" id="res1" onmouseover="showdetails(event)">
+					<h2>Wendy's</h2>
+				<div class="JMrating">
+					<span class="rating-number">4.2</span>
+					<span class="JMrating">&#9733;</span>
+				</div>
+			</div>
+
+			<div class="JMrestaurant1" id="ress1" style="display: none;">
+				<a href="Restaurant.html">
+					<img class= "resimg" src= "images\wendys.png" alt= "Wendey's logo">
+				</a>	
+					<hr>
+					<h2>Wendy's</h2>
+					<p>Classic American flavors at Wendy's.</p>
+				<div class="JMrating">
+					<span class="rating-number">4.2</span>
+					<span class="JMrating">&#9733;</span>
+				</div>
+			</div>
+    
+			<div class="JMrestaurant" id="res2" onmouseover="showdetails(event)">
+					<h2>Larana</h2>
+				<div class="JMrating">
+					<span class="rating-number">4.2</span>
+					<span class="JMrating">&#9733;</span>
+				</div>
+			</div>
+
+			<div class="JMrestaurant1" id="ress2" style="display: none;">
+				<a href="Restaurant.html">
+					<img class= "resimg" src= "images\larana.png" alt= "Larana logo">
+				</a>
+					<hr>
+					<h2>Larana</h2>
+					<p>Taste the best burger at Larana</p>
+				<div class="JMrating">
+					<span class="rating-number">4.2</span>
+					<span class="JMrating">&#9733;</span>
+				</div>
+			</div>
+    
+    		<div class="JMrestaurant" id="res3" onmouseover="showdetails(event)">
+        			<h2>Borcelle</h2>
+				<div class="JMrating">
+					<span class="rating-number">4.2</span>
+					<span class="JMrating">&#9733;</span>
+				</div>
+    		</div>
+
+			<div class="JMrestaurant1" id="ress3" style="display: none;">
+				<a href="Restaurant.html">
+					<img class= "resimg" src= "images\borcelle.png" alt= "Borcelle logo">
+				</a>
+					<hr>
+        			<h2>Borcelle</h2>
+        			<p>Fresh, flavorful pizzas from Borcelle</p>
+				<div class="JMrating">
+					<span class="rating-number">4.2</span>
+					<span class="JMrating">&#9733;</span>
+				</div>
+    		</div>
+    
+    		<div class="JMrestaurant" id="res4" style="display: none;"  onmouseover="showdetails(event)">
+        			<h2>Popeyes</h2>
+				<div class="JMrating">
+					<span class="rating-number">4.2</span>
+					<span class="JMrating">&#9733;</span>
+				</div>
+    		</div>
+
+			<div class="JMrestaurant1" id="ress4" style="display: none;">
+				<a href="Restaurant.html">
+					<img class= "resimg" src= "images\popeyes.png" alt= "Popeyes logo">
+				</a>
+					<hr>
+        			<h2>Popeyes</h2>
+        			<p>Crunchy fried chicken bursting with Louisiana flavor</p>
+				<div class="JMrating">
+					<span class="rating-number">4.2</span>
+					<span class="JMrating">&#9733;</span>
+				</div>
+    		</div>
+    
+    		<div class="JMrestaurant" id="res5" style="display: none;" onmouseover="showdetails(event)">
+        			<h2>Domino's Pizza</h2>
+					<div class="JMrating">
+					<span class="rating-number">4.2</span>
+					<span class="JMrating">&#9733;</span>
+				</div>
+    		</div>
+
+			<div class="JMrestaurant1" id="ress5" style="display: none;">
+				<a href="Restaurant.html">
+					<img class= "resimg" src= "images\Dominos.png" alt= "Domino's pizza logo">
+				</a>
+					<hr>
+        			<h2>Domino's Pizza</h2>
+        			<p>The recognized world leader in pizza delivery</p>
+					<div class="JMrating">
+					<span class="rating-number">4.2</span>
+					<span class="JMrating">&#9733;</span>
+				</div>
+    		</div>
+    
+    		<div class="JMrestaurant" id="res6" style="display: none;" onmouseover="showdetails(event)">
+        			<h2>Subway</h2>
+					<div class="JMrating">
+					<span class="rating-number">4.2</span>
+					<span class="JMrating">&#9733;</span>
+				</div>
+    		</div>
+
+			<div class="JMrestaurant1" id="ress6" style="display: none;">
+				<a href="Restaurant.html">
+					<img class= "resimg" src= "images\subway.png" alt= "Subway logo">
+				</a>
+					<hr>
+        			<h2>Subway</h2>
+        			<p>Fresh sandwiches made your way</p>
+					<div class="JMrating">
+					<span class="rating-number">4.2</span>
+					<span class="JMrating">&#9733;</span>
+				</div>
+    		</div>
+    
+    		<div class="JMrestaurant" id="res7" style="display: none;" onmouseover="showdetails(event)">
+        			<h2>Baskin Robbins</h2>
+					<div class="JMrating">
+					<span class="rating-number">4.2</span>
+					<span class="JMrating">&#9733;</span>
+				</div>
+    		</div>
+
+			<div class="JMrestaurant1" id="ress7" style="display: none;">
+				<a href="Restaurant.html">
+					<img class= "resimg" src= "images\baskin.png" alt= "Baskin robbins logo">
+				</a>
+					<hr>
+        			<h2>Baskin Robbins</h2>
+        			<p>31 flavors, endless smiles</p>
+					<div class="JMrating">
+					<span class="rating-number">4.2</span>
+					<span class="JMrating">&#9733;</span>
+				</div>
+    		</div>
+    
+    		<div class="JMrestaurant" id="res8" style="display: none;" onmouseover="showdetails(event)">
+        			<h2>Warner Club</h2>
+					<div class="JMrating">
+					<span class="rating-number">4.2</span>
+					<span class="JMrating">&#9733;</span>
+				</div>
+    		</div>
+
+			<div class="JMrestaurant1" id="ress8" style="display: none;">
+				<a href="Restaurant.html">
+					<img class= "resimg" src= "images\warner.png" alt= "Warner's club logo">
+				</a>
+					<hr>
+        			<h2>Warner Club</h2>
+        			<p>Desserts and more</p>
+					<div class="JMrating">
+					<span class="rating-number">4.2</span>
+					<span class="JMrating">&#9733;</span>
+				</div>
+    		</div>
+    
+    		<div class="JMrestaurant" id="res9" style="display: none;" onmouseover="showdetails(event)">
+        			<h2>Mamola</h2>
+					<div class="JMrating">
+					<span class="rating-number">4.2</span>
+					<span class="JMrating">&#9733;</span>
+				</div>
+    		</div>
+
+			<div class="JMrestaurant1" id="ress9" style="display: none;">
+				<a href="Restaurant.html">
+					<img class= "resimg" src= "images\mamola.png" alt= "Mamola logo">
+				</a>
+					<hr>
+        			<h2>Mamola</h2>
+        			<p>A different experience for traditional dessert</p>
+					<div class="JMrating">
+					<span class="rating-number">4.2</span>
+					<span class="JMrating">&#9733;</span>
+				</div>
+    		</div>
+		</div>
+		<a href="#" class="load-more" onclick="showMoreRestaurants()">Load More</a>
+		</main>
+		
+		<footer>
+			<div id='contactus'>
+				<h3>Contact Us:</h3>
+					<ul>
+						<li><a href="tel:+966 055 475 5584" class= "phone">+966 055 475 5584</a></li>
+						<li><a href="tel:+966 055 475 5584" class= "phone">+011 275 3859</a></li>
+						<li><a href="mailto:IT312G4@gmail.com" class= "email">IT312G4@gmail.com</a></li>
+					</ul>
+				</div>
+				
+				<div id='followus'>
+				<h3>Follow Us:</h3>
+					<ul>
+						<li>Instagram</li>
+						<li>X</li>
+					</ul>
+				</div>
+				
+				<div id='copyright'>
+					<p> &copy; 2024 IT312 Project </p>
+				</div>
+		</footer>
+		<script>
+    		function showMoreRestaurants() {
+        	var hiddenRestaurants = document.querySelectorAll('.JMrestaurant[style="display: none;"]');
+        	var count = 0;
+
+        	hiddenRestaurants.forEach(function(restaurant) {
+            if (count < 3) {
+                restaurant.style.display = 'block';
+                count++;
+            }
+        	});
+
+        	var loadMoreLink = document.querySelector('.load-more');
+        	if (document.querySelectorAll('.JMrestaurant[style="display: none;"]').length === 0) {
+            	loadMoreLink.style.display = 'none';
+        	}
+    		}
+			
+			function showdetails(event) {
+    		var restaurantId = event.currentTarget.id;
+    		var correspondingDetails = document.getElementById('ress' + restaurantId.slice(3));
+    
+    		if (correspondingDetails) {
+        		correspondingDetails.style.display = 'block';
+        		correspondingDetails.style.left = event.currentTarget.offsetLeft + 'px';
+        		correspondingDetails.style.top = event.currentTarget.offsetTop + 'px';
+    		}
+    
+    		var allDetails = document.querySelectorAll('.JMrestaurant1');
+    		allDetails.forEach(function(detail) {
+        	if (detail.id !== 'ress' + restaurantId.slice(3)) {
+            	detail.style.display = 'none';
+        	}
+    		});
+			}
+			document.querySelector('.JMrestaurant-container').addEventListener('mouseleave', function(event) {
+    		var allDetails = document.querySelectorAll('.JMrestaurant1');
+    		allDetails.forEach(function(detail) {
+        	detail.style.display = 'none';
+    		});
+			});
+		</script>
+	</body>
+</html>

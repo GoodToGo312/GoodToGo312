@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="my_script.js"></script>
+		<script src="Joud.js"></script>
+		<title>Add Offers Page</title>
+		<style>
+			@import url("stylesheet.css") ;
+		</style>
+	</head>
+	<body onload="onload()">
+		<header>
+			<div id='Logo'>
+				<h1>Good To Go</h1>
+			</div>
+			<div class='navigation'>
+				<a href= "index.html" accesskey="h">Home Page</a>
+				<a href= "OwnerDashboard.html" accesskey="o">Owner Dashboard</a>
+				<a href= "CustomerDashboard.html" accesskey="c">Customer Dashboard</a>
+			</div>
+		</header>
+		<main>
+		<ul class="breadcrumb">
+        <li><a href="index.html">Home Page</a></li>
+        <li><a href= "OwnerDashboard.html" >Owner Dashboard</a></li>
+        <li><a href="MakeOffer.html">Make an Offer Page</a></li>
+    </ul>
+			<h2 class="JBh2">Your Offers</h2>
+			<form class = "JBoffers-list" id="JBoffers-list">
+				<ul class="JBcheckbox-list">
+					<li id="JBoffer1">
+							<img src="images/offer1.png" alt="picture of food offer" class = "JBofferImg">
+								<input type="checkbox" name="offer" class="JBcheckBox" id="JBoffer1_checkbox">
+								<label for="JBoffer1_checkbox"><br><strong>Offer 1</strong><br><br>Burger Combo Bonanza: 
+								Sink your teeth into our juicy burgers with a special offer! Buy one burger combo 
+								and get the second combo at 50% off. Treat yourself and a friend to a delicious 
+								meal deal that's too good to resist!</label>
+							<button type="button"  onclick="deleteOffer('JBoffer1')">delete</button>
+						
+					</li>
+					<li id="JBoffer2">
+						
+							<img src="images/offer2.png" alt="picture of food offer" class = "JBofferImg">
+								<input type="checkbox" name="offer" class="JBcheckBox" id="JBoffer2_checkbox">
+								<label for="JBoffe2_checkbox"><br><strong>Offer 2</strong><br><br>Fries Frenzy: Craving crispy fries? Upgrade 
+								your meal with our Fries Frenzy offer! Add a large fries to any burger combo for 
+								just $1 extra. It's the perfect way to satisfy your fry cravings without breaking 
+								the bank.</label>
+							<button type="button" onclick="deleteOffer('JBoffer2')">delete</button>
+						
+					</li>
+					<li id="JBoffer3">
+							<img src="images/offer3.png" alt="picture of food offer" class = "JBofferImg">
+								<input type="checkbox" name="offer" class="JBcheckBox" id="JBoffer3_checkbox">
+								<label for="JBoffer3_checkbox"><br><strong>Offer 3</strong><br><br>Family Feast Special: Planning a family 
+								dinner? Enjoy our Family Feast Special and save big! Get 20% off on all 
+								family-sized meal combos. Gather your loved ones and indulge in a feast of burgers, 
+								fries, and drinks at unbeatable prices!</label>
+							<button type="button" onclick="deleteOffer('JBoffer3')">delete</button>
+					
+					</li>
+					
+				</ul>
+				
+			</form>
+
+			<hr>
+			<h2 class="JBh2">Add a New Offer</h2>
+			<form class="JBaddOffer-container">
+				<div class="JBaddOffer-container1">
+					<div id="JBofferName">
+						<label for="JBoffer">Offer Name: </label><br><br>
+						<input type="text" name="offer" id="JBoffer">
+					</div>
+					<div id="JBofferDes">
+						<label for="JBofferDe">Offer Description: </label><br><br>
+						<input type="text" name="offerdes" id="JBofferDe">
+					</div>
+				</div>
+					
+					<div id="JBaddPhoto">
+						<label>Add a photo:</label><br><br>
+						<input type="file" name="photo" id="photo">
+					</div>
+					<button class= "jbbutton" type="button" onclick="addOffer()">Submit</button>
+			</form>
+			
+		
+		</main>
+		
+		
+		
+		<footer>
+			<div id='contactus'>
+				<h3>Contact Us:</h3>
+					<ul>
+						<li>+966 055 475 5584</li>
+						<li>+011 275 3859</li>
+						<li>IT312G4@gmail.com</li>
+					</ul>
+				</div>
+				
+				<div id='followus'>
+				<h3>Follow Us:</h3>
+					<ul>
+						<li>Instagram</li>
+						<li>X</li>
+					</ul>
+				</div>
+				
+				<div id='copyright'>
+					<p> &copy; 2024 IT312 Project </p>
+				</div>
+		</footer>
+		
+</html>

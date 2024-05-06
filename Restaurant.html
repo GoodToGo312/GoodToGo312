@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Restaurant</title>
+		<style>
+		
+			@import url("stylesheet.css") ;
+			
+		</style>
+		<script src="Joud.js"></script>
+		<script src= "JavaScriptRestaurant.js"></script>
+	</head>
+	
+	<body onload="onload()">
+		<header>
+			<div id='Logo'>
+				<h1>Good To Go</h1>
+			</div>
+			<div class='navigation'>
+				<a href="index.html" accesskey="H">Home Page</a>
+				<a href="OwnerDashboard.html" accesskey="O">Owner Dashboard</a>
+				<a href="CustomerDashboard.html" accesskey="C">Customer Dashboard</a>
+			</div>
+		</header>
+		
+		<main>
+
+		  <div class='header'>
+		  <ul class="Dbreadcrumb">
+          <li><a href="index.html">Home Page</a></li>
+          <li><a href="CustomerDashboard.html">Customer Dashboard</a></li> 
+          <li><a href="Restaurant.html">Restaurant</a></li>
+          </ul>
+
+          <div id='choises' > 
+		        <select name="sortOptions" class='selection ' >  <!-- name="EightiesFave"-->
+				<optgroup label="Sort by Price ">
+                   <option> Higher to lower </option> 
+				   <option> Lower to higher </option>				 
+				<optgroup label="Sort by meal name ">
+                   <option> A to Z </option> 
+				   <option> Z to A </option> 
+                </select>
+          </div>		
+		  </div>
+		
+		<h1>Main Courses</h1>
+		
+		<hr>
+	
+		<div class='parentsDiv2'><!--the first father -->
+		
+		<div class='childDiv'> <!--the first offer -->
+		<img src="images/img3.png" alt="Gourmet Symphony image" class='image' ><br>
+		<span ><strong>Gourmet Symphony</strong></span><br><br>
+		<span  >It is a colorful dish to combine between green salads, dried fruits, white cheese,and bread.</span><br><br>
+		<span >177 Calories</span><br>
+		<span class='price' >33 SR</span>
+		
+		<div class='container'>
+		<label><input type="checkbox" name="checkbox1" class="meal-checkbox"></label>
+		<div class="quantity"> <button class="quantity-decrease">-</button><p class="quantity2">1</p><button class="quantity-increase">+</button></div>
+		</div>
+		
+		</div>
+		
+		<div class='childDiv'> <!--the Second offer -->
+		<img src="images/img1.png" alt="Grilled beef burger image" class='image'><br>
+		<span><strong>Grilled beef burger</strong> </span> <br><br>
+		<span >Flame-grilled beef burger with melted cheddar cheese slices, and a special sauce rich in flavors.</span><br><br>
+		<span > 600 Calories</span><br>
+		<span class='price'>25 SR</span>
+		
+		<div class='container'>
+		<label><input type="checkbox" name="checkbox1" class="meal-checkbox"></label>
+		<div class="quantity"> <button class="quantity-decrease">-</button><p class="quantity2">1</p><button class="quantity-increase">+</button></div>
+		</div>
+		
+		</div>
+		
+		<div class='childDiv' > <!--the third offer -->
+		<img src="images/img2.png" alt="Royal shawarma image" class='image'><br>
+		<span ><strong>Royal shawarma</strong></span><br><br>
+		<span >Perfectly toasted soft bread, stuffed with carefully seasoned and grilled steak. </span><br><br>
+		<span >238 Calories</span><br>
+		<span class='price'>15 SR</span>
+		
+		<div class='container'>
+		<label><input type="checkbox" name="checkbox1" class="meal-checkbox"></label>
+		<div class="quantity"> <button class="quantity-decrease">-</button><p class="quantity2">1</p><button class="quantity-increase">+</button></div>
+		</div>
+		
+		</div>
+		
+		</div>
+		
+		
+		
+		
+		<h1>Dessert</h1>
+		
+		<hr>
+		
+		<div class='parentsDiv2' ><!--the sconed father -->
+		
+		<div class='childDiv'> <!--the first offer -->
+		<img src="images/img5.png" alt="Royal Delight image" class='image'><br>
+		<span ><strong>Royal Delight </strong></span><br><br>
+		<span >It has several layers of cream and fresh fruits, making it a perfect choice</span><br><br>
+		<span >400 Calories</span><br>
+		<span class='price'>70 SR</span>
+		
+		<div class='container'>
+		<label><input type="checkbox" name="checkbox1" class="meal-checkbox"></label>
+		<div class="quantity"> <button class="quantity-decrease">-</button><p class="quantity2">1</p><button class="quantity-increase">+</button></div>
+		</div>
+		
+		</div>
+		
+		<div class='childDiv'> <!--the Second offer -->
+		<img src="images/img6.png" alt="Macarons image" class='image'><br>
+		<span ><strong>Macarons</strong></span><br><br>
+		<span >A famous dessert characterized by its diverse colors and delicious taste.Filled with cream or chocolate</span><br><br>
+		<span >50 Calories</span><br>
+		<span class='price'>7 SR</span>
+		
+		<div class='container'>
+		<label><input type="checkbox" name="checkbox1" class="meal-checkbox"></label>
+		<div class="quantity"> <button class="quantity-decrease">-</button><p class="quantity2">1</p><button class="quantity-increase">+</button></div>
+		</div>
+		
+		</div>
+		
+		<div class='childDiv'> <!--the third offer -->
+		<img src="images/img7.png" alt="Iced cup of joy image" class='image'><br>
+		<span ><strong>Iced cup of joy</strong></span><br><br>
+		<span >Ice cream comes in multiple flavors with layers of fresh fruits and rich sauce.</span><br><br>
+		<span >250 Calories</span><br>
+		<span class='price'>18 SR</span>
+		
+		<div class='container'>
+		<label><input type="checkbox" name="checkbox1" class="meal-checkbox"></label>
+		<div class="quantity"> <button class="quantity-decrease">-</button><p class="quantity2">1</p><button class="quantity-increase">+</button> </div>
+		</div>
+		
+		</div>
+		
+		</div>
+		
+		<h1>Drinks</h1>
+		
+		<hr>
+		
+		<div class='parentsDiv2' ><!--the third father -->
+		
+		<div class='childDiv'> <!--the first offer -->
+		<img src="images/img4.png" alt="Burst of Joy image" class='image'><br>
+		<span ><strong>Burst of Joy</strong></span><br><br>
+		<span >it is a soft drink characterized by its active and refreshing bubbles that quickly rise to the surface</span><br><br>
+		<span >120 Calories</span><br>
+		<span class='price'>14 SR</span>
+		
+		<div class='container'>
+		<label><input type="checkbox" name="checkbox1" class="meal-checkbox"></label>
+		<div class="quantity"> <button class="quantity-decrease">-</button><p class="quantity2">1</p><button class="quantity-increase">+</button> </div>
+		</div>
+		
+		</div>
+		
+		<div class='childDiv'> <!--the Second offer -->
+		<img src="images/img8.png" alt="Healthy summer breeze image" class='image'><br>
+		<span ><strong>Healthy summer breeze</strong></span><br><br>
+		<span >A blend of fresh vegetables and fruits, with a touch of mint and ginger to add a refreshing flavour.</span><br><br>
+		<span >150 Calories</span><br>
+		<span class='price'>12 SR</span>
+		
+		<div class='container'>
+		<label><input type="checkbox" name="checkbox1" class="meal-checkbox"></label>
+		<div class="quantity"><button class="quantity-decrease">-</button><p class="quantity2">1</p><button class="quantity-increase">+</button> </div>
+		</div>
+		
+		</div>
+		
+		<div class='childDiv'> <!--the third offer -->
+		<img src="images/img9.png" alt="Morning tune image" class='image'><br>
+		<span ><strong>Morning tune</strong></span><br><br>
+		<span >Features a rich blend of carefully roasted Arabica coffee, with a touch of creamy milk .</span><br><br>
+		<span >100 Calories</span><br>
+		<span class='price'>13 SR</span>
+		
+		<div class='container'>
+		<label><input type="checkbox" name="checkbox1" class="meal-checkbox"></label>
+		<div class="quantity"> <button class="quantity-decrease">-</button><p class="quantity2">1</p><button class="quantity-increase">+</button> </div>
+		</div>
+		
+		</div>
+		
+		</div>
+	
+	<button id="cart-button" onclick="addToCart()">Add to cart</button> 
+  
+		<!--<a href="Cart.html" style= "text-decoration: none;">
+			<button id="cart-button">Add to cart</button>
+		</a> -->
+	
+		</main>
+		<footer>
+			<div id='contactus'>
+				<h3>Contact Us:</h3>
+					<ul>
+						<li><a href="tel:+966 055 475 5584" class= "phone">+966 055 475 5584</a></li>
+						<li><a href="tel:+966 055 475 5584" class= "phone">+011 275 3859</a></li>
+						<li><a href="mailto:IT312G4@gmail.com" class= "email">IT312G4@gmail.com</a></li>
+					</ul>
+				</div>
+				
+				<div id='followus'>
+				<h3>Follow Us:</h3>
+					<ul>
+						<li>Instagram</li>
+						<li>X</li>
+					</ul>
+				</div>
+				
+				<div id='copyright'>
+					<p> &copy; 2024 IT312 Project </p>
+				</div>
+		</footer>
+		
+		<script>
+document.addEventListener("DOMContentLoaded", function() { 
+    // Function to sort meals based on selected criteria 
+    function sortMeals() { 
+        var selectElement = document.querySelector('.selection'); 
+        var selectedOption = selectElement.options[selectElement.selectedIndex].text; 
+        var meals = document.querySelectorAll('.childDiv'); 
+        
+        if (selectedOption.includes("Price")) { 
+            meals = Array.from(meals).sort(function(a, b) { 
+                var priceA = parseFloat(a.querySelector('.price').innerText); 
+                var priceB = parseFloat(b.querySelector('.price').innerText); 
+                return selectedOption.includes("Higher") ? priceB - priceA : priceA - priceB; 
+            }); 
+        } else if (selectedOption.includes("Name")) { 
+            meals = Array.from(meals).sort(function(a, b) { 
+                var nameA = a.querySelector('strong').innerText.toLowerCase(); 
+                var nameB = b.querySelector('strong').innerText.toLowerCase(); 
+                return selectedOption.includes("Z") ? nameB.localeCompare(nameA) : nameA.localeCompare(nameB); 
+            }); 
+        } else if (selectedOption.includes("Calories")) { 
+            meals = Array.from(meals).sort(function(a, b) { 
+                var caloriesA = parseInt(a.querySelector('.calories').innerText); 
+                var caloriesB = parseInt(b.querySelector('.calories').innerText); 
+                return selectedOption.includes("Higher") ? caloriesB - caloriesA : caloriesA - caloriesB; 
+            }); 
+        } else if (selectedOption.includes("A to Z")) { 
+            meals = Array.from(meals).sort(function(a, b) { 
+                var nameA = a.querySelector('strong').innerText.toLowerCase(); 
+                var nameB = b.querySelector('strong').innerText.toLowerCase(); 
+                return nameA.localeCompare(nameB); 
+            }); 
+        } else if (selectedOption.includes("Z to A")) { 
+            meals = Array.from(meals).sort(function(a, b) { 
+                var nameA = a.querySelector('strong').innerText.toLowerCase(); 
+                var nameB = b.querySelector('strong').innerText.toLowerCase(); 
+                return nameB.localeCompare(nameA); 
+            }); 
+        }
+        
+        var parentDiv = document.querySelector('.parentsDiv2'); 
+        meals.forEach(function(meal) { 
+            parentDiv.appendChild(meal); 
+        }); 
+    } 
+    
+    // Add event listener for sorting meals 
+    var selectElement = document.querySelector('.selection'); 
+    selectElement.addEventListener('change', sortMeals); 
+});
+</script>
+	</body>
+</html>

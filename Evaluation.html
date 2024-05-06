@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation</title>
+    <style>
+        @import url("stylesheet.css");
+    </style>
+    <script src="Joud.js"></script>
+
+</head>
+
+<body onload="onload()">
+
+
+    <header>
+        <div id='Logo'>
+            <h1>Good To Go</h1>
+        </div>
+        <div class='navigation'>
+            <a href="index.html" accesskey="h">Home Page</a>
+            <a href="OwnerDashboard.html" accesskey="o">Owner Dashboard</a>
+            <a href="CustomerDashboard.html" accesskey="c">Customer Dashboard</a>
+        </div>
+    </header>
+
+    <main>
+
+        <ul class="GHBreadcrumb">
+            <li><a href="index.html">Home Page</a></li>
+            <li><a href="CustomerDashboard.html">Customer Dashboard</a></li>
+            <li><a href="Restaurants.html">Restaurant</a></li>
+            <li><a href="Cart.html">Cart</a></li>
+            <li><a href="Evaluation.html">Restaurant evaluation</a></li>
+        </ul>
+
+ 
+
+        <div class="GHtitle-pre">
+
+            <div id="GHtitle">
+                <p><strong>Give feedback</strong></p>
+            </div>
+
+            <div id="GHpre">
+                <p>
+                <form id="feedbackForm" onsubmit="return validateForm()">
+
+                <label for="restaurantSelect">Select a restaurant:</label>
+                <select id="restaurantSelect">
+                    <option value="">Please select</option>
+                        <option value="Wendy's">Wendy's</option>
+                        <option value="Larana">Larana</option>
+                        <option value="Borcelle">Borcelle</option> 
+                        <option value="Popeyes">Popeyes</option> 
+                        <option value="Domino's Pizza">Domino's Pizza</option> 
+                        <option value="Subway">Subway</option> 
+                        <option value="Baskin Robbins">Baskin Robbins</option>  
+                        <option value="Warner Club">Warner Club</option>  
+                        <option value="Mamola">Mamola</option>  
+                </select>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="GHrate-photo">
+
+            <div id="GHrating">
+                <p><strong>Rate your experience!</strong></p>
+                <div class="GHcontainer">
+                    <label for="rate">(0 to 10):</label>
+                    <input type="range" id="rate" name="rate" min="0" max="10">
+                </div>
+            </div>
+
+            <div id="GHphoto-section">
+                <p><strong>Add a photo</strong></p>
+                <input type="file" name="userPhoto" accept="image/*">
+            </div>
+
+        </div>
+
+        <div class="GHcommet">
+
+            <div id="GHcomment-section">
+                <p><strong>Do you have any comment?</strong></p>
+                <textarea name="comment-box" rows="5"></textarea>
+            </div>
+
+            <div id="GHsubmit-buttons">
+                <button type="submit">Submit</button>
+                <button type="reset">Cancel</button>
+            </div>
+
+        </div>
+</form>
+    </main>
+
+    <footer>
+        <div id='contactus'>
+            <h3>Contact Us:</h3>
+            <ul>
+                <li><a href="tel:+966 055 475 5584" class="phone">+966 055 475 5584</a></li>
+                <li><a href="tel:+966 055 475 5584" class="phone">+011 275 3859</a></li>
+                <li><a href="mailto:IT312G4@gmail.com" class="email">IT312G4@gmail.com</a></li>
+            </ul>
+        </div>
+
+        <div id='followus'>
+            <h3>Follow Us:</h3>
+            <ul>
+                <li>Instagram</li>
+                <li>X</li>
+            </ul>
+        </div>
+
+        <div id='copyright'>
+            <p> &copy; 2024 IT312 Project </p>
+        </div>
+    </footer>
+    
+    
+<script>  
+    
+ 
+   function validateForm() {
+    var select = document.getElementById("restaurantSelect");
+    var rating = document.getElementById("rate");
+
+    // Check if a restaurant is selected
+    if (select.value === "") {
+        alert("Please select a restaurant.");
+        return false;
+    }
+
+    // Check if a rating is given
+    if (rating.value === "") {
+        alert("Please provide a rating.");
+        return false;
+    }
+
+    
+    alert(`Thank you for your feedback! Your rating for restaurant ${select.value} is ${rating.value}`);
+    window.location.href="HomePage.html";
+    return false;
+    
+}
+ 
+    
+    
+    
+    
+    
+    
+</script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+</body>
+
+</html>

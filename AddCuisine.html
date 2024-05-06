@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Add a Cuisine</title>
+		<style>
+			@import url("stylesheet.css") ;
+		</style>
+		<script src="my_script.js"></script>
+		<script src="Joud.js"></script>
+	</head>
+	
+	<body onload="onload()">
+		<header>
+			<div id='Logo'>
+				<h1>Good To Go</h1>
+			</div>
+			<div class='navigation'>
+				<a href= "index.html"  accesskey="h">Home Page</a>
+				<a href= "OwnerDashboard.html" accesskey="o">Owner Dashboard</a>
+				<a href= "CustomerDashboard.html" accesskey="c">Customer Dashboard</a>
+			</div>
+		</header>
+		<main>
+			<ul class="breadcrumb">
+        <li><a href="index.html">Home Page</a></li>
+         <li><a href= "OwnerDashboard.html" >Owner Dashboard</a></li>
+        <li><a href="AddCuisine.html">Add a Cuisine Page</a></li>
+    </ul>
+			
+			<form>
+				<div class="JBcuisine-container">
+				<h2 style="text-align: center; font-weight: lighter;">Add a Cuisine</h2>
+					<div class="JBcuisine-container1">
+			
+						<div id="JBnameOfMeal">
+							<label for="JBnameOfMeal">Name Of Meal: </label><br><br>
+							<input type="text" name="name" id="JBMealName">
+						</div>
+						<div id="JBprice">
+							<label for="JBPrice">Price: </label><br><br>
+							<input type="text" name="price" id="JBPrice">
+						</div>
+					</div>
+					<div class="JBcuisine-container2">
+						<div id="JBcalories">
+							<label for="JBCalories">Calories: </label><br><br>
+							<input type="text" name="cal" id="JBCalories">
+						</div>
+						<div id="JBdescription">
+							<label for="JBDescription">Description: </label><br><br>
+							<input type="text" name="des" id="JBDescription">
+						</div>
+					</div>
+					<hr>
+					<div id="JBaddPhoto">
+						<label>Add a photo:
+						<br><br>
+						<input type="file" name="photo">
+						</label>
+					</div>
+					<button type="button" onclick="checkButton()">Submit</button>
+				</div>
+			</form>
+			
+		
+	
+		</main>
+		
+		
+		<footer>
+			<div id='contactus'>
+				<h3>Contact Us:</h3>
+					<ul>
+						<li>+966 055 475 5584</li>
+						<li>+011 275 3859</li>
+						<li>IT312G4@gmail.com</li>
+					</ul>
+				</div>
+				
+				<div id='followus'>
+				<h3>Follow Us:</h3>
+					<ul>
+						<li>Instagram</li>
+						<li>X</li>
+					</ul>
+				</div>
+				
+				<div id='copyright'>
+					<p> &copy; 2024 IT312 Project </p>
+				</div>
+		</footer>
+		
+	</body>
+
+
+
+
+
+
+</html>
+

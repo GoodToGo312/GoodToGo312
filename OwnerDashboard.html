@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Owner Dashboard</title>
+		<style>
+			@import url("stylesheet.css") ;
+			h1 {
+    margin-left: 11%;
+    padding-top: 4%;
+    color: var(--color3);
+    position: relative;
+}
+
+    </style>
+    <script src="Joud.js"></script>
+    <script src="my_script.js"></script>
+    <script>
+	
+   /*function hideMainElements() {
+    // Select all h1 and hr elements within the <main> tag
+    let headingsAndLines = document.querySelectorAll('main > h1, main > hr');
+    
+    // Loop through each element and hide it
+    headingsAndLines.forEach(function(element) {
+        element.style.display = 'none';
+    });
+}*/
+
+function clearMainContent() {
+    // Select the main element
+    let mainElement = document.getElementById('main');
+    
+    // Remove all h1 and hr elements
+    let headingsAndLines = mainElement.querySelectorAll('h1, hr');
+    headingsAndLines.forEach(function(element) {
+        mainElement.removeChild(element);
+    });
+    
+    // Select all child elements of main except choises2
+    let childElements = mainElement.children;
+    
+    // Loop through each child element and remove it if it's not choises2
+    for (let i = 0; i < childElements.length; i++) {
+        if (childElements[i].id !== 'choises2') {
+            mainElement.removeChild(childElements[i]);
+        }
+    }
+}
+
+    </script>
+</head>
+	
+	<body onload="onload()">
+	
+		<header>
+			<div id='Logo'>
+				<h1>Good To Go</h1>
+			</div>
+			<div class='navigation'>
+				<a href="index.html" accesskey="H">Home Page</a>
+				<a href="OwnerDashboard.html" accesskey="O">Owner Dashboard</a>
+				<a href="CustomerDashboard.html" accesskey="C">Customer Dashboard</a>
+			</div>
+		</header>
+		
+		<main id='main'>
+			<ul class="Dbreadcrumb">
+				<li><a href="index.html">Home Page</a></li>
+				<li><a href="OwnerDashboard.html">Owner Dashboard</a></li>
+			</ul>
+		
+			<div id='choises2'>
+				<a href="AddCuisine.html" class='OnewrDashboardLinks' accesskey="a"> Add a cuisine</a>
+				<a href="MakeOffer.html" class='OnewrDashboardLinks' accesskey="m">Make an Offer</a>
+			</div>
+		
+			<h1>Main Courses</h1>
+			<hr>
+		
+			<div class='parentsDiv'><!--the first father -->
+				<!-- Existing childDivs will be populated with meals from local storage -->
+				<div id="ownerDashboard">
+				</div>
+			</div>
+			
+			<h1>Dessert</h1>
+			<hr>
+			
+			<div class='parentsDiv' ><!--the sconed father -->
+				<!-- Existing childDivs will be populated with meals from local storage -->
+			</div>
+			
+			<h1>Drinks</h1>
+			<hr>
+			
+			<div class='parentsDiv' ><!--the third father -->
+				<!-- Existing childDivs will be populated with meals from local storage -->
+			</div>
+		
+		</main>
+		
+		<footer>
+			<div id='contactus'>
+				<h3>Contact Us:</h3>
+				<ul>
+					<li><a href="tel:+966 055 475 5584" class= "phone">+966 055 475 5584</a></li>
+					<li><a href="tel:+966 055 475 5584" class= "phone">+011 275 3859</a></li>
+					<li><a href="mailto:IT312G4@gmail.com" class= "email">IT312G4@gmail.com</a></li>
+				</ul>
+			</div>
+			
+			<div id='followus'>
+				<h3>Follow Us:</h3>
+				<ul>
+					<li>Instagram</li>
+					<li>X</li>
+				</ul>
+			</div>
+			
+			<div id='copyright'>
+				<p> &copy; 2024 IT312 Project </p>
+			</div>
+		</footer>
+		
+		</body>
+		</html>
